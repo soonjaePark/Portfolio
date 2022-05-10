@@ -1,0 +1,203 @@
+/* Noto */
+@font-face {
+	src: url("/font/NotoSansKR-Black.otf");
+	font-family: "Noto-Black";
+}
+
+@font-face {
+	src: url("/font/NotoSansKR-Bold.otf");
+	font-family: "Noto-Bold";
+}
+
+@font-face {
+	src: url("/font/NotoSansKR-Light.otf");
+	font-family: "Noto-Light";
+}
+
+@font-face {
+	src: url("/font/NotoSansKR-Medium.otf");
+	font-family: "Noto-Medium";
+}
+
+@font-face {
+	src: url("/font/NotoSansKR-Regular.otf");
+	font-family: "Noto-Regular";
+}
+
+@font-face {
+	src: url("/font/NotoSansKR-Thin.otf");
+	font-family: "Noto-Thin";
+}
+
+
+/* material_icons */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/vendors/materialicons/materialicons-filled/Materialicons-Regular.eot); /* For IE6-8 */
+    src: url(/vendors/materialicons/materialicons-filled/Materialicons-Regular.woff2) format('woff2'),
+         url(/vendors/materialicons/materialicons-filled/Materialicons-Regular.woff) format('woff'),
+         url(/vendors/materialicons/materialicons-filled/Materialicons-Regular.ttf) format('truetype');
+  }   
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;   
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+
+/* material_icons_outline */
+@font-face {
+    font-family:  'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/vendors/materialicons/materialicons-outlined/MaterialiconsOutlined-Regular.eot); /* For IE6-8 */
+    src: url(/vendors/materialicons/materialicons-outlined/MaterialiconsOutlined-Regular.woff2) format('woff2'),
+         url(/vendors/materialicons/materialicons-outlined/MaterialiconsOutlined-Regular.woff) format('woff'),
+         url(/vendors/materialicons/materialicons-outlined/MaterialiconsOutlined-Regular.ttf) format('truetype');
+  }  
+  .material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;   
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+/* material_icons_round */
+@font-face {
+    font-family:  'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/vendors/materialicons/materialicons-round/MaterialiconsRound-Regular.eot); /* For IE6-8 */
+    src: url(/vendors/materialicons/materialicons-round/MaterialiconsRound-Regular.woff2) format('woff2'),
+         url(/vendors/materialicons/materialicons-round/MaterialiconsRound-Regular.woff) format('woff'),
+         url(/vendors/materialicons/materialicons-round/MaterialiconsRound-Regular.ttf) format('truetype');
+  }  
+  .material-icons-round {
+    font-family: 'Material Icons Round';
+    font-weight: normal;   
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+/* material_icons_sharp */
+@font-face {
+    font-family:  'Material Icons Sharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/vendors/materialicons/materialicons-sharp/MaterialiconsSharp-Regular.eot); /* For IE6-8 */
+    src: url(/vendors/materialicons/materialicons-sharp/MaterialiconsSharp-Regular.woff2) format('woff2'),
+         url(/vendors/materialicons/materialicons-sharp/MaterialiconsSharp-Regular.woff) format('woff'),
+         url(/vendors/materialicons/materialicons-sharp/MaterialiconsSharp-Regular.ttf) format('truetype');
+  }  
+  .material-icons-sharp {
+    font-family: 'Material Icons Sharp';
+    font-weight: normal;   
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  /* material_icons_twotone*/
+@font-face {
+    font-family:  'Material Icons TwoTone';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/vendors/materialicons/materialicons-twotone/MaterialiconsTwoTone-Regular.eot); /* For IE6-8 */
+    src: url(/vendors/materialicons/materialicons-twotone/MaterialiconsTwoTone-Regular.woff2) format('woff2'),
+         url(/vendors/materialicons/materialicons-twotone/MaterialiconsTwoTone-Regular.woff) format('woff'),
+         url(/vendors/materialicons/materialicons-twotone/MaterialiconsTwoTone-Regular.ttf) format('truetype');
+  }  
+  .material-icons-twotone {
+    font-family: 'Material Icons TwoTone';
+    font-weight: normal;   
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+/* .f-1vw { font-size: 1vw;}
+.f-1-5vw { font-size: 1.5vw;}
+.f-2vw { font-size: 2vw;}
+.f-5vw { font-size: 5vw;}
+.f-10vw { font-size: 10vw;}
+.f-20vw { font-size: 20vw;}
+.f-30vw { font-size: 30vw;}
+.f-40vw { font-size: 40vw;} */

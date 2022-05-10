@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout}">
+<head>
+    <style>
+    body{
+        background-color:black;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<div layout:fragment="content" class="back">
+    <hr class="" style="color: white;" id="line">
+
+    <div class="d-none" name="menuList">
+        <!-- <a href="/myinfo"><div>나의 정보</div></a> -->
+        <div>프로젝트</div>
+        <div>정리</div>
+    </div>
+</div>
+<script src="/vendors/jquery-3.6.0/jquery-3.6.0.min.js" th:src="@{/vendors/jquery-3.6.0/jquery-3.6.0.min.js}"></script>
+
+<script src="/js/index.js"></script>
+
+</html>
