@@ -3,7 +3,6 @@ package sjpark.porfolio.portfolio.services.myinfo.impl;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class MyInfoServiceImpl implements MyInfoService {
     MyInfoRepo mRepo;
     
     public ResultMsg<List<MyInfoModel>> MyInfoData(){     
-        long a = 1;
+        
         List<MyInfoModel> myinfo = mRepo.findAll().stream().map(this::ConvertEntityToModel).collect(Collectors.toList());
 
         return new ResultMsg<>(true, myinfo);
@@ -46,5 +45,27 @@ public class MyInfoServiceImpl implements MyInfoService {
         model.setModifyDtStr(StrDate);
 
         return model;
+    }
+
+    public ResultMsg<MyInfoModel> MyInfoUpdate(MyInfoModel model){
+
+        Optional<MyInfoEntity> oMyInfoEntity = mRepo.findById(model.getSeq());
+
+        if(!oMyInfoEntity.isPresent()){
+            return new ResultMsg<MyInfoModel>(false, "데이터가 존재하지 않습니다");
+        }
+        
+        MyInfoEntity myInfoEntity = oMyInfoEntity.get();
+
+        myInfoEntity.setName(model.getName());
+        myInfoEntity.setAge(model.getAge());
+        myInfoEntity.setTel(model.getTel());
+        myInfoEntity.setEmail(model.getEmail());
+
+        mRepo.save(myInfoEntity);
+
+        MyInfoModel myInfoModel  = ConvertEntityToModel(myInfoEntity);
+
+        return new ResultMsg<MyInfoModel>(true, myInfoModel, "정상적으로 저장되었습니다");
     }
 }

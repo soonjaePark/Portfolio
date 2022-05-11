@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" 
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-        <script src="/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-        <style>
-           
-        </style>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <style>
+        .div-float {
+            float: left;
+        }
+    </style>
 
-        <div>최근 수정일 : </div> <span></span>
-        <form>
-            <div>이름</div><input name="name">
-            <div>나이</div><input name="age">
-            <div>출생년도</div><input name="birth">
-            <div>연락처</div><input name="tel">
-            <div>email</div><input name="email">
-            <div></div><div></div>
-        </form>
-    </body>
-    <script>
-        $(document).ready(function(){
-        
-        })
-    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="div-float">최근 수정일 : </div> <span id="span_date"></span>
+        </div>
+    </div>
+
+
+    <form action="/myinfo/data" id="infoData">
+        <div>
+            <div>
+                <div class="div-float">이름</div>
+                <div type="text" name="name" id="input_name"></div>
+            </div>
+            <div>
+                <div class="div-float">나이</div>
+                <div name="age" id="input_age"></div>
+            </div>
+            <div>
+                <div class="div-float">연락처</div>
+                <div name="tel" id="input_tel"></div>
+            </div>
+            <div>
+                <div class="div-float">email</div>
+                <div name="email" id="input_email"></div>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <div>
+            <button type="button">수정</button>
+        </div> -->
+
+    </form>
+
+</body>
+<script src="/js/myinfo.js"></script>
+
 </html>
