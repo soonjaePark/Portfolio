@@ -11,7 +11,10 @@ import sjpark.porfolio.portfolio.models.myinfo.MyInfoModel;
 
 public interface MyInfoService  {
 
+    //조회
     public ResultMsg<List<MyInfoModel>> MyInfoData();
 
+    //수정
     public ResultMsg<MyInfoModel> MyInfoUpdate(MyInfoModel model);
+    
 }

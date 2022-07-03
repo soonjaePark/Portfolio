@@ -23,6 +23,7 @@ public class MyInfoServiceImpl implements MyInfoService {
     @Autowired
     MyInfoRepo mRepo;
     
+    //조회
     public ResultMsg<List<MyInfoModel>> MyInfoData(){     
         
         List<MyInfoModel> myinfo = mRepo.findAll().stream().map(this::ConvertEntityToModel).collect(Collectors.toList());
@@ -42,12 +43,13 @@ public class MyInfoServiceImpl implements MyInfoService {
                             .build();
 
         
-        String StrDate = model.getModifyDt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-        model.setModifyDtStr(StrDate);
+        String modifyStr = model.getModifyDt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        model.setModifyDtStr(modifyStr);
 
         return model;
     }
 
+    //수정
     public ResultMsg<MyInfoModel> MyInfoUpdate(MyInfoModel model){
 
         Optional<MyInfoEntity> oMyInfoEntity = mRepo.findById(model.getSeq());
