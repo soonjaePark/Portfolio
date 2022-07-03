@@ -1,5 +1,6 @@
 package sjpark.porfolio.portfolio.services.myinfo.impl;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
@@ -61,6 +62,7 @@ public class MyInfoServiceImpl implements MyInfoService {
         myInfoEntity.setAge(model.getAge());
         myInfoEntity.setTel(model.getTel());
         myInfoEntity.setEmail(model.getEmail());
+        myInfoEntity.setModifyDt(LocalDateTime.now());
 
         mRepo.save(myInfoEntity);
 

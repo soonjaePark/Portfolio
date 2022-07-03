@@ -16,7 +16,7 @@ const myinfo = () => {
             $('#input_email').html(_data.email);
 
         } else {
-            alert('data.log');
+            showErrorMessage(data.msg);
         }
 
     });

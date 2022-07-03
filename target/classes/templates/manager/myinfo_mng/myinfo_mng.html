@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ layout:decorator="~{layouts/layout}">
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -8,11 +9,16 @@
         .div-float{
             float: left;
         }
+        body{
+        background-color:black;
+        }
+        
     </style>
 
 </head>
 
-<body>
+<div layout:fragment="content" class="back">
+<div class="container">
     <div>
         <div>
             <div class="div-float">최근 수정일 : </div> <span id="span_date"></span>
@@ -20,7 +26,7 @@
     </div>
 
 
-    <form action="/myinfoMng/update" id="infoData">
+    <form action="/mng/myinfo/update" id="infoData">
         <input name="seq" id="input_seq" type="hidden">
         <div>
             <div>
@@ -44,7 +50,8 @@
         </div>
 
     </form>
-</body>
+</div>
+</div>
 <script src="/js/manager/myinfo_mng/myinfo_mng.js"></script>
 
 </html>

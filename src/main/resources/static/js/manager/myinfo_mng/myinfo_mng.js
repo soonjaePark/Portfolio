@@ -1,7 +1,7 @@
 const form_data = $('#infoData');
 
 const myinfo = () => {
-    var _url = '/myinfoMng/data';
+    var _url = '/mng/myinfo/data';
     const getting = $.get(_url);
 
     getting.done(function (data) {            
@@ -31,9 +31,9 @@ const updateMyinfo = () => {
         console.log(data);
         if(data.stat == "true"){
             myinfo();
-            alert(data.msg);
+            showMessage(data.msg);
         }else{
-            alert(data.msg);
+            // showErrorMessage(data.msg);
         }
     })
     posting.fail((error)=> {

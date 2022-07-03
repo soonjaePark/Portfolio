@@ -15,7 +15,7 @@ import sjpark.porfolio.portfolio.models.myinfo.MyInfoModel;
 import sjpark.porfolio.portfolio.services.myinfo.MyInfoService;
 
 @Controller
-@RequestMapping("/myinfoMng")
+@RequestMapping("/mng/myinfo")
 public class MyInfoMngController {
     
     @Autowired

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
+<th:block layout:fragment="content">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -23,31 +23,28 @@
     <form action="/myinfo/data" id="infoData">
         <div>
             <div>
-                <div class="div-float">이름</div>
+                <div class="div-float">이름 :  </div>
                 <div type="text" name="name" id="input_name"></div>
             </div>
             <div>
-                <div class="div-float">나이</div>
+                <div class="div-float">나이 :  </div>
                 <div name="age" id="input_age"></div>
             </div>
             <div>
-                <div class="div-float">연락처</div>
+                <div class="div-float">연락처 :  </div>
                 <div name="tel" id="input_tel"></div>
             </div>
             <div>
-                <div class="div-float">email</div>
+                <div class="div-float">email :  </div>
                 <div name="email" id="input_email"></div>
             </div>
             <div></div>
             <div></div>
         </div>
-        <!-- <div>
-            <button type="button">수정</button>
-        </div> -->
 
     </form>
 
 </body>
 <script src="/js/myinfo.js"></script>
-
+</th:block>
 </html>
