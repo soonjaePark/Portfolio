@@ -23,48 +23,33 @@
     <form action="/myinfo/data" id="infoData">
         <div>
             <div>
-<<<<<<< HEAD
-                <div class="div-float">이름 :  </div>
-                <div type="text" name="name" id="input_name"></div>
-            </div>
-            <div>
-                <div class="div-float">나이 :  </div>
-                <div name="age" id="input_age"></div>
-            </div>
-            <div>
-                <div class="div-float">연락처 :  </div>
-                <div name="tel" id="input_tel"></div>
-            </div>
-            <div>
-                <div class="div-float">email :  </div>
-                <div name="email" id="input_email"></div>
-=======
                 <div class="div-float">이름</div>
-                <input type="text" name="name" id="input_name" readonly></div>
+                <div type="text" name="name" id="div_name"></div>
             </div>
             <div>
                 <div class="div-float">나이</div>
-                <input name="age" id="input_age" readonly></div>
+                <div name="age" id="div_age"></div>
             </div>
             <div>
                 <div class="div-float">연락처</div>
-                <input name="tel" id="input_tel" readonly></div>
+                <div name="tel" id="div_tel"></div>
             </div>
             <div>
                 <div class="div-float">email</div>
-                <input name="email" id="input_email" readonly></div>
+                <div name="email" id="div_email"></div>
             </div>
             <div>
                 <div class="div-float">최근 수정일</div>
-                <input name="modifyDt" id="modifyDt" readonly></div>
->>>>>>> ac15d0b8b5456c7ef5e95224091e84a3835c8f29
+                <div name="modifyDt" id="div_modifyDt"></div>
             </div>
             <div></div>
         </div>
-
     </form>
+    <button type="button" id="button_home">HOME</button>
+    <button type="button" id="button_update">UPDATE</button>
 
 </body>
-<script src="/js/myinfo.js"></script>
+<script src="/js/myinfo/myInfo.js"></script>
 </th:block>
+<th:block th:replace="/myinfo/modals/myInfoModal"></th:block>
 </html>
