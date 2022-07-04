@@ -1,36 +1,51 @@
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="https://www.thymeleaf.org">
+<head>
+  <style>
+    .modal{
+      color: black;
+    }
+   
+  </style>
+  </head>
+<body>
 <div class="modal fade" id="myinfo_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <h5 class="modal-title" id="exampleModalLabel">나의 정보 수정</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form id="update_form" action="/myinfo/save">
+            
             <div class="mb-3">
               <label for="recipient-name" class="col-form-label">이름:</label>
-              <input type="text" class="form-control" id="input_name">
+              <input type="text" class="form-control" name="name" id="input_name">
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">나이:</label>
-              <textarea class="form-control" id="input_tel"></textarea>
+              <textarea class="form-control" name="age" id="input_tel"></textarea>
             </div>
             <div class="mb-3">
                 <label for="message-text" class="col-form-label">연락처:</label>
-                <textarea class="form-control" id="input_contact"></textarea>
+                <textarea class="form-control" name="tel" id="input_contact"></textarea>
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">E-Mail:</label>
-                <textarea class="form-control" id="input_email"></textarea>
+                <textarea class="form-control" name="email" id="input_email"></textarea>
               </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
+          <button type="submit" id="button_save" class="btn btn-primary">저장</button>
         </div>
       </div>
-    </div>
-    <script src="/js/myinfo/modals/myInfoModal.js"></script>
+    </div>    
   </div>
+  <script src="/js/myinfo/modals/myInfoModal.js"></script>
+</body>
+  </html>
