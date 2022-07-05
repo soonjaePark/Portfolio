@@ -38,13 +38,13 @@ public class MyInfoController {
 
     @GetMapping("/detail/{seq}")
     public @ResponseBody ResultMsg<MyInfoModel> detailData (@PathVariable ("seq") Long seq){
-        return null;
+        return mService.MyInfoDetail(seq);
     }
 
     @PostMapping("/save")
     public @ResponseBody ResultMsg<MyInfoModel> saveData (MyInfoModel model){
-        log.info(model.toString());
-        return null;
+        
+        return mService.MyInfoUpdate(model);
     }
 
     

@@ -15,3 +15,13 @@ const showErrorMessage = (msg) => {
     showErrorMessageModal.modal('show');
 
 }
+
+$('#showMessage').on('click', 'button', function(e) {
+    e.preventDefault();
+    $('#showMessage').modal('hide');
+})
+
+$('#showErrorMessage').on('click', 'button', function(e) {
+    e.preventDefault();
+    $('#showMessage').modal('hide');
+})

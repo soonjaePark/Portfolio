@@ -49,6 +49,7 @@ public class MyInfoServiceImpl implements MyInfoService {
         return model;
     }
 
+    //상세보기
     public ResultMsg<MyInfoModel> MyInfoDetail(Long seq){
 
         Optional<MyInfoEntity> myInfo = mRepo.findById(seq);

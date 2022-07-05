@@ -14,6 +14,8 @@ public interface MyInfoService  {
     //조회
     public ResultMsg<List<MyInfoModel>> MyInfoData();
 
+    public ResultMsg<MyInfoModel> MyInfoDetail(@PathVariable("seq") Long seq);
+
     //수정
     public ResultMsg<MyInfoModel> MyInfoUpdate(MyInfoModel model);
     

@@ -24,6 +24,16 @@ const myinfo = () => {
     });
 }
 
+const myinfoDetail = (data) => {
+    $('#update_name').val(data.name);
+    $('#update_age').val(data.age);
+    $('#update_tel').val(data.tel);
+    $('#update_email').val(data.email);
+
+    $('#myinfo_modal').modal('show');
+
+}
+
 $('#button_home').on('click', function(e) {
     e.preventDefault();
     
@@ -38,12 +48,11 @@ $('#button_update').on('click', function(e) {
     getting.done(function(data) {
         console.log(data);
         if(data.stat='true'){
-            console.log(data);
+            myinfoDetail(data.data);
         }else{
-
+            showErrorMessage(data.msg);
         }
     })
-    $('#myinfo_modal').modal('show');
 })
 
 $(document).ready(function () {
