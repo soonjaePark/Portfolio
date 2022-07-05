@@ -49,6 +49,20 @@ public class MyInfoServiceImpl implements MyInfoService {
         return model;
     }
 
+    public ResultMsg<MyInfoModel> MyInfoDetail(Long seq){
+
+        Optional<MyInfoEntity> myInfo = mRepo.findById(seq);
+        
+        if(!myInfo.isPresent()){
+            return new ResultMsg<MyInfoModel>(false, "데이터가 없습니다");
+        }
+
+        MyInfoModel rslt = ConvertEntityToModel(myInfo.get());
+
+        return new ResultMsg<MyInfoModel>(true, "정상적으로 조회되었습니다", rslt);
+
+    }
+
     //수정
     public ResultMsg<MyInfoModel> MyInfoUpdate(MyInfoModel model){
 
@@ -70,6 +84,6 @@ public class MyInfoServiceImpl implements MyInfoService {
 
         MyInfoModel myInfoModel  = ConvertEntityToModel(myInfoEntity);
 
-        return new ResultMsg<MyInfoModel>(true, myInfoModel, "정상적으로 저장되었습니다");
+        return new ResultMsg<MyInfoModel>(true, "정상적으로 저장되었습니다", myInfoModel);
     }
 }

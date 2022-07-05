@@ -20,7 +20,7 @@ xmlns:th="https://www.thymeleaf.org">
         </div>
         <div class="modal-body">
           <form id="update_form" action="/myinfo/save">
-            
+            <input type="hidden" class="form-control" name="seq" id="input_seq">
             <div class="mb-3">
               <label for="recipient-name" class="col-form-label">이름:</label>
               <input type="text" class="form-control" name="name" id="input_name">

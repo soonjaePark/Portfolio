@@ -19,7 +19,7 @@ public class ResultMsg<T> {
         this.msg = msg;
     }
 
-    public ResultMsg (Boolean stat, T data, String msg){
+    public ResultMsg (Boolean stat, String msg, T data){
         this.status = stat;
         this.data = data;
         this.msg = msg;

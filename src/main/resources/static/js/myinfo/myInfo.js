@@ -15,6 +15,7 @@ const myinfo = () => {
             $('#div_age').html(_data.age);
             $('#div_tel').html(_data.tel);
             $('#div_email').html(_data.email);
+            $('#input_seq').val(_data.seq);
 
         } else {
             showErrorMessage(data.msg);
@@ -31,6 +32,17 @@ $('#button_home').on('click', function(e) {
 
 $('#button_update').on('click', function(e) {
     e.preventDefault();
+    const _url = '/myinfo/detail/' + $('#input_seq').val();
+    const getting = $.get(_url);
+
+    getting.done(function(data) {
+        console.log(data);
+        if(data.stat='true'){
+            console.log(data);
+        }else{
+
+        }
+    })
     $('#myinfo_modal').modal('show');
 })
 

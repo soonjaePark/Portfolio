@@ -36,7 +36,7 @@ public class MyInfoController {
         return mService.MyInfoData();
     }
 
-    @GetMapping("/detail")
+    @GetMapping("/detail/{seq}")
     public @ResponseBody ResultMsg<MyInfoModel> detailData (@PathVariable ("seq") Long seq){
         return null;
     }
